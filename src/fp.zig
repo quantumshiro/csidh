@@ -22,3 +22,15 @@ pub fn ctIsNonZero64(i: u64) bool {
         return true;
     }
 }
+
+// Returnss result of x < y operation.
+pub fn isLess(x: Fp, y: Fp) bool {
+    for (x, y) |a, b| {
+        if (a < b) {
+            return true;
+        } else if (a > b) {
+            return false;
+        }
+    }
+    return false;
+}
